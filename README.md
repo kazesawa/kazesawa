@@ -1,6 +1,4 @@
-# Kazesawa Font
-
-![Logo of Kazesawa Font](https://raw.githubusercontent.com/kazesawa/logo/master/kazesawa_w700.png)
+# ![Kazesawa Font](https://raw.githubusercontent.com/kazesawa/logo/master/kazesawa_w700.png)
 
 ![Sample](https://raw.githubusercontent.com/kazesawa/kazesawa/master/samples/kazesawa-sample-sil.png)
 
