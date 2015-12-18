@@ -18,7 +18,7 @@ ttf:
 	python generate_ttf.py ./deps/$(SOURCE_SANS_PRO_DIR)/OTF/ ./deps/$(MPLUS_DIR)/
 
 zip:
-	zip -r kazesawa.zip out/ README.md
+	zip -r kazesawa.zip out/ README.md -x "out/*.sfd"
 
 fresh: | fetch_deps ttf zip
 
