@@ -4,7 +4,7 @@ MPLUS_URL = http://jaist.dl.osdn.jp/mplus-fonts/62344/mplus-TESTFLIGHT-060.tar.x
 MPLUS_DIR = mplus-TESTFLIGHT-060
 
 .DEFAULT_GOAL := release
-.PHONY: fetch_deps ttf zip release clean clean_deps
+.PHONY: fetch_deps ttf zip release clean clean_deps samples
 
 fetch_deps:
 	test -d deps || mkdir deps
@@ -36,3 +36,8 @@ clean_deps:
 	rm -r deps/
 
 clean_all: | clean clean_deps
+
+samples:
+	find samples/ -name '*.svg' -exec inkscape -z -A {}.pdf -d 72 {} \; -exec pdftocairo -r 72 -png {}.pdf {}.png \;
+	rm samples/*.pdf
+	rename -v svg\.png-1\.png png samples/*
