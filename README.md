@@ -4,6 +4,10 @@
 
 [Slide: Introducing Kazewasa Font](https://speakerdeck.com/polamjag/introducing-kazesawa-font)
 
+## Download
+
+See [Releases in GitHub](https://github.com/kazesawa/kazesawa/releases).
+
 ## How to build
 
 ```
