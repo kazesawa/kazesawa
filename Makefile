@@ -20,6 +20,7 @@ zip:
 
 clean:
 	rm -r out/
+	rm kazesawa.zip
 
 clean_deps:
 	rm -r deps/
