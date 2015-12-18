@@ -2,13 +2,18 @@
 
 ![Logo of Kazesawa Font](https://raw.githubusercontent.com/kazesawa/logo/master/kazesawa_w700.png)
 
-[Slide: Introducing Kazewasa Font](https://speakerdeck.com/polamjag/introducing-kazesawa-font)
+[紹介スライド: Introducing Kazewasa Font](https://speakerdeck.com/polamjag/introducing-kazesawa-font)
 
-## Download
+## ダウンロード
 
-See [Releases in GitHub](https://github.com/kazesawa/kazesawa/releases).
+以下の方法がおすすめです:
 
-## How to build
+- [GitHub の Releases](https://github.com/kazesawa/kazesawa/releases)
+- [現在の master ブランチの zip](https://github.com/kazesawa/kazesawa/archive/master.zip)
+
+master ブランチの zip をダウンロードした場合は、フォント本体は `out/` ディレクトリ内にあります。
+
+## ビルド方法
 
 ```
 $ git clone https://github.com/kazesawa/kazesawa && cd kazesawa
