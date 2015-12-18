@@ -23,8 +23,3 @@ or
 $ git clone https://github.com/kazesawa/kazesawa && cd kazesawa
 $ make fresh
 ```
-
-
-## License
-
-SIL Open Font License

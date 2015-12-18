@@ -18,7 +18,13 @@ ttf:
 	python generate_ttf.py ./deps/$(SOURCE_SANS_PRO_DIR)/OTF/ ./deps/$(MPLUS_DIR)/
 
 zip:
-	zip -r kazesawa.zip out/ README.md -x "out/*.sfd"
+	test -d out/mplus || mkdir -p out/mplus
+	test -d out/source-sans-pro || mkdir -p out/source-sans-pro
+	cp deps/$(MPLUS_DIR)/{LICENSE,README}_{E,J}  out/mplus/
+	cp deps/$(SOURCE_SANS_PRO_DIR)/{LICENSE.txt,README.md} out/source-sans-pro/
+	cp release_readme.txt out/README.txt
+	cp LICENSE.txt out/
+	cd out/ && zip -r ../kazesawa.zip . -x "*.sfd"
 
 fresh: | fetch_deps ttf zip
 
