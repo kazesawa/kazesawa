@@ -2,6 +2,8 @@
 
 ![Logo of Kazesawa Font](https://raw.githubusercontent.com/kazesawa/logo/master/kazesawa_w700.png)
 
+![Sample](https://raw.githubusercontent.com/kazesawa/kazesawa/master/samples/kazesawa-sample-sil.png)
+
 [紹介スライド: Introducing Kazewasa Font](https://speakerdeck.com/polamjag/introducing-kazesawa-font)
 
 ## ダウンロード
