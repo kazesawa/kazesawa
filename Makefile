@@ -4,7 +4,7 @@ MPLUS_URL = http://jaist.dl.osdn.jp/mplus-fonts/62344/mplus-TESTFLIGHT-060.tar.x
 MPLUS_DIR = mplus-TESTFLIGHT-060
 
 .DEFAULT_GOAL := release
-.PHONY: fetch_deps ttf zip release clean clean_deps samples
+.PHONY: fetch_deps ttf woff zip release clean clean_deps samples
 
 fetch_deps:
 	test -d deps || mkdir deps
@@ -16,6 +16,10 @@ fetch_deps:
 ttf:
 	test -d out || mkdir out
 	python generate_ttf.py ./deps/$(SOURCE_SANS_PRO_DIR)/OTF/ ./deps/$(MPLUS_DIR)/
+
+woff:
+	find out/ -name '*.ttf' -exec ttf2woff -v {} {}.woff \;
+	rename -v ttf.woff woff out/*.woff
 
 zip:
 	test -d out/mplus || mkdir -p out/mplus
