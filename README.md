@@ -13,6 +13,17 @@
 
 master ブランチの zip をダウンロードした場合は、フォント本体は `out/` ディレクトリ内にあります。
 
+OS X ユーザの場合は、以下の様なワンライナーを端末で実行することで最新のものを `$HOME/Library/Fonts` にインストールできます:
+
+```sh
+pushd $(pwd) && cd $TMPDIR && curl -LO $(curl -i 'https://github.com/kazesawa/kazesawa/releases/latest/' | tr -d $'\r' | grep Location | head -n1 | awk '{print $2}' | sed -e 's|/releases/tag/|/releases/download/|' -e 's|$|/kazesawa.zip|') && unzip kazesawa.zip '*.ttf' -d $HOME/Library/Fonts/ && rm kazesawa.zip && popd
+```
+
+Linux などでも同様のことが可能です:
+```sh
+mkdir $HOME/.fonts $$ pushd $(pwd) && cd $TMPDIR && curl -LO $(curl -i 'https://github.com/kazesawa/kazesawa/releases/latest/' | tr -d $'\r' | grep Location | head -n1 | awk '{print $2}' | sed -e 's|/releases/tag/|/releases/download/|' -e 's|$|/kazesawa.zip|') && unzip kazesawa.zip '*.ttf' -d $HOME/.fonts/ && rm kazesawa.zip && fc-cache -fv && popd
+```
+
 ## ビルド方法
 
 ```
